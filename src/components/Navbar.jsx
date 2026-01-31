@@ -42,7 +42,13 @@ const Navbar = () => {
           {/* Right Actions */}
           <div className="hidden sm:flex items-center space-x-2">
             <ThemeToggle />
-            <Button className="font-semibold">Join Now</Button>
+            <Link
+              href="https://wa.me/919897831874?text=Hi%20I%20want%20to%20join%20your%20gym"
+              target="_blank"
+            >
+              {" "}
+              <Button className="font-semibold">Join Now</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,7 +85,12 @@ const Navbar = () => {
 
           <ThemeToggle />
 
-          <Button className="w-full max-w-xs font-semibold">Join Now</Button>
+          <Link
+            href="https://wa.me/918920629551?text=Hi%20I%20want%20to%20join%20your%20gym"
+            target="_blank"
+          >
+            <Button className="w-full max-w-xs font-semibold">Join Now</Button>
+          </Link>
         </div>
       </div>
     </motion.nav>

@@ -10,13 +10,13 @@ import React from "react";
 const Home = () => {
   return (
     <main className="min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Program />
       <WhyChooseUs />
       <Testimonials />
       <Pricing />
-      <Footer />
+    
     </main>
   );
 };

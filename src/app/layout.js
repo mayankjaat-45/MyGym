@@ -1,6 +1,8 @@
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,7 +18,11 @@ export const metadata = {
   title: "My Gym - Transform Your Body, Transform your Life",
   description:
     "Join Our Fitness program and achieve your goals with expert trainers and personalized plans. Start your transformation today",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
@@ -29,7 +35,9 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

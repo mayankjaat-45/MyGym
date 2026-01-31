@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -81,11 +82,17 @@ const Pricing = () => {
                     ))}
                   </ul>
 
-                  <Button
-                    className={`w-full py-2 text-lg  font-semibold transition-colors duration-300 ${plan.popular ? "bg-primary hover:bg-primary/90 text-primary-foreground" : "bg-secondary hover:bg-primary text-primary-foreground dark:text-foreground"}`}
+                  <Link
+                    href={`https://wa.me/919897831874?text=Hi%20I%20want%20to%20know%20more%20about%20your%20${plan.name}%20plan`}
+                    target="_blank"
                   >
-                    {plan.cta}
-                  </Button>
+                    {" "}
+                    <Button
+                      className={`w-full py-2 text-lg  font-semibold transition-colors duration-300 ${plan.popular ? "bg-primary hover:bg-primary/90 text-primary-foreground" : "bg-secondary hover:bg-primary text-primary-foreground dark:text-foreground"}`}
+                    >
+                      {plan.cta}
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </motion.div>

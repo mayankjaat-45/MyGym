@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import * as motion from "motion/react-client";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,30 +34,37 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center ">
-            <Button
-              size="lg"
-              className="
+            <Link
+              href="https://wa.me/919897831874?text=Hi%20I%20want%20to%20join%20your%20gym"
+              target="_blank"
+            >
+              <Button
+                size="lg"
+                className="
     bg-primary text-lg font-semibold px-8
     transition-transform duration-200
     hover:bg-primary/90 hover:scale-105
     active:scale-95
   "
-            >
-              Start Free Trial
-            </Button>
+              >
+                Start Free Trial
+              </Button>
+            </Link>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="
+            <Link href={'#pricing'}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="
     bg-transparent text-lg font-semibold px-8
     transition-transform duration-200
     hover:scale-105
     active:scale-95
   "
-            >
-              View Plans
-            </Button>
+              >
+                View Plans
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
